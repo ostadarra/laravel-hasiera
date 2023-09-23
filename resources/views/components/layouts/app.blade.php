@@ -11,9 +11,16 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- Icons Fonts Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        
+        <!-- SweetAlert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        
         <!-- Styles -->
         @livewireStyles
     </head>
@@ -40,5 +47,15 @@
 
         @stack('modals')
         @livewireScripts
+
+        <script>
+            Livewire.on('alerta', function(){
+                Swal.fire(
+                    '¡Buen trabajo!',
+                    'Has creado un nuevo registro!',
+                    'success'
+                )
+            })
+        </script>
     </body>
 </html>

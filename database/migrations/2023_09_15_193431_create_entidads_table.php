@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->integer('padre_id');
             $table->boolean('ficha');
+            $table->string('imagen');
             $table->timestamps();
         });
     }
