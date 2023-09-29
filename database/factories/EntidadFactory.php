@@ -20,7 +20,7 @@ class EntidadFactory extends Factory
             'nombre' => $this->faker->word(),
             'padre_id' => 0,
             'ficha' => $this->faker->boolean(),
-            'imagen' => 'entidades/' . $this->faker->image('public/assets/imagenes/entidades', 640, 480,null, false)
+            'imagen' => 'entidades/' . $this->faker->image('public/storage/app/public/entidades', 640, 480,null, false)
         ];
     }
 }

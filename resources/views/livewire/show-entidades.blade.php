@@ -69,7 +69,18 @@
                                 <i class="fas fa-sort float-right mt-1"></i>
                             @endif
                         </th>
-
+                        <th wire:click="orden('imagen')" scope="col" class="cursor-pointer px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500">
+                            Imagen
+                            @if ($sort == 'ficha')
+                                @if ($direccion == 'asc')
+                                    <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i>
+                                @else
+                                    <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i>
+                                @endif
+                            @else
+                                <i class="fas fa-sort float-right mt-1"></i>
+                            @endif
+                        </th>
                         <th scope="col" class="relative py-3.5 px-4">
                         </th>
                     </tr>
@@ -96,6 +107,12 @@
                             <td class="px-6 py-4">
                                 <div class="text-sm text-gray-900">
                                     {{ $entidad->ficha }}
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4">
+                                <div class="text-sm text-gray-900">
+                                    {{ $entidad->imagen }}
                                 </div>
                             </td>
 
